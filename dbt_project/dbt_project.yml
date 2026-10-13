@@ -1,0 +1,12 @@
+name: 'ecom_dbt'
+version: '1.0.0'
+config-version: 2
+profile: 'ecom_dbt'
+model-paths: ["models"]
+
+models:
+  ecom_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
